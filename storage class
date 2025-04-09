@@ -1,0 +1,18 @@
+#include <stdio.h>
+int extern c;
+void Add()
+{
+    static int b=34;
+    printf("static B is %d\n",b++);
+}
+int main()
+{
+    auto int x=5;
+    printf("Auto x is %d\n",x);
+    register int v=35;
+    printf("register v is %d\n",v);
+    Add();
+    Add();
+    Add();
+    return 0;
+}
